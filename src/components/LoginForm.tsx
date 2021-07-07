@@ -67,12 +67,13 @@ export const LoginForm = (props: TLoginFormProps) => {
                 {({ field, form }: any) => (
                   <FormControl
                     id="email"
+                    pr="1"
                     isInvalid={form.errors.email && form.touched.email}
                   >
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <Input
                       id="email"
-                      mx="1.5"
+                      ml="1.5"
                       type="email"
                       disabled={props.isSubmitting}
                       spellCheck="false"
@@ -106,10 +107,9 @@ export const LoginForm = (props: TLoginFormProps) => {
                         pr="3"
                       />
                       <Input
-                        mx="1.5"
+                        ml="1.5"
                         type={isShownPassword ? "text" : "password"}
                         disabled={props.isSubmitting}
-                        pr="40"
                         spellCheck="false"
                         {...field}
                       />
