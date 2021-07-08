@@ -17,7 +17,6 @@ export const App = () => {
         align="center"
         w="100%"
         h="100vh"
-        p="5"
         bg="url(https://webgradients.com/public/webgradients_png/089%20Premium%20White.png)"
       >
         {isLoggedIn ? (
