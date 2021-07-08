@@ -22,7 +22,9 @@ import * as yup from "yup";
 
 type TLoginFormProps = {
   setIsLoggedIn: (flag: boolean) => any;
+  setActiveForm: (activeForm: string) => any;
 };
+
 const validationSchema = new yup.ObjectSchema({
   email: yup
     .string()
@@ -32,7 +34,7 @@ const validationSchema = new yup.ObjectSchema({
 });
 
 export const LoginForm = (props: TLoginFormProps) => {
-  const { setIsLoggedIn } = props;
+  const { setIsLoggedIn, setActiveForm } = props;
   const [isShownPassword, setIsShownPassword] = useState(false);
 
   return (
@@ -118,7 +120,7 @@ export const LoginForm = (props: TLoginFormProps) => {
                       {form.errors.password}
                     </FormErrorMessage>
                     <FormHelperText mx="1.5">
-                      <Link color="teal.500" fontSize="xs">
+                      <Link color="grey.500" fontSize="xs">
                         Zaboravili ste lozinku?
                       </Link>
                     </FormHelperText>
@@ -137,7 +139,10 @@ export const LoginForm = (props: TLoginFormProps) => {
               Prijava
             </Button>
             <Text fontSize="sm" textAlign="center">
-              Nemaš račun? <Link color="teal.400">Registriraj se</Link>
+              Nemaš račun?{" "}
+              <Link color="teal.400" onClick={() => setActiveForm("register")}>
+                Registriraj se
+              </Link>
             </Text>
           </Box>
         </Form>

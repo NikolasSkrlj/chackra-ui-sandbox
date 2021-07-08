@@ -4,10 +4,11 @@ import { useState } from "react";
 
 type TWelcomePageProps = {
   setIsLoggedIn: (flag: boolean) => any;
+  setActiveForm: (activeForm: string) => any;
 };
 
 export const WelcomePage = (props: TWelcomePageProps) => {
-  const { setIsLoggedIn } = props;
+  const { setIsLoggedIn, setActiveForm } = props;
   const [isLogoutClicked, setIsLogoutClicked] = useState(false);
   return (
     <Box
@@ -42,6 +43,7 @@ export const WelcomePage = (props: TWelcomePageProps) => {
             setTimeout(() => {
               setIsLogoutClicked(false);
               setIsLoggedIn(false);
+              setActiveForm("login");
             }, 1500);
           }}
         >
