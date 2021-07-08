@@ -16,6 +16,16 @@ import {
   FormLabel,
   Select,
   Input,
+  Table,
+  TableCaption,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
+  Tfoot,
+  Checkbox,
+  Badge,
 } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
@@ -129,12 +139,13 @@ export const WelcomePage = (props: TWelcomePageProps) => {
         rowSpan={1}
         bg="white"
         p="5"
+        pl="10"
         boxShadow="md"
         borderRadius="md"
       >
         <SimpleGrid columns={3} spacing={3} h="100%">
           <Box height="80px">
-            <FormControl id="gradska-četvrt">
+            <FormControl id="gradska-četvrt" size="sm">
               <FormLabel>Gradska četvrt</FormLabel>
               <Select placeholder="Odaberi...">
                 <option>Novi Zagreb</option>
@@ -184,7 +195,63 @@ export const WelcomePage = (props: TWelcomePageProps) => {
         bg="white"
         boxShadow="md"
         borderRadius="md"
-      />
+        pr="5"
+      >
+        <Table variant="simple" fontSize="sm">
+          <Thead bg="gray.100">
+            <Tr>
+              <Th>Status</Th>
+              <Th>Gradska četvrt</Th>
+              <Th>Mjesni odbor</Th>
+              <Th>Tema</Th>
+              <Th>Naselje</Th>
+              <Th>Adresa</Th>
+              <Th>Status</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>
+                <Checkbox></Checkbox>
+              </Td>
+              <Td>Novi Zagreb</Td>
+              <Td>Blato</Td>
+              <Td>Javna rasvjeta</Td>
+              <Td>Zagreb</Td>
+              <Td>Mladena Fiolića 12i</Td>
+              <Td>
+                <Badge colorScheme="orange">Glasanje u tijeku</Badge>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Checkbox isChecked></Checkbox>
+              </Td>
+              <Td>Stari Zagreb</Td>
+              <Td>Blato 2</Td>
+              <Td>Kanalizacija</Td>
+              <Td>Zagreb</Td>
+              <Td>Vladimira Nazora 49b</Td>
+              <Td>
+                <Badge colorScheme="green">Glasanje završeno</Badge>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Checkbox isChecked></Checkbox>
+              </Td>
+              <Td>Srednji Zagreb</Td>
+              <Td>Blato 3</Td>
+              <Td>Parkovi</Td>
+              <Td>Zagreb</Td>
+              <Td>Miroslava Krleže 3</Td>
+              <Td>
+                <Badge colorScheme="green">Glasanje završeno</Badge>
+              </Td>
+            </Tr>
+          </Tbody>
+        </Table>
+      </GridItem>
       <GridItem
         colSpan={10}
         rowSpan={2}
