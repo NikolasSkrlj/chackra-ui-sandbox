@@ -47,6 +47,8 @@ export const LoginForm = (props: TLoginFormProps) => {
           setIsLoggedIn(true);
         }, 1500);
       }}
+      validateOnChange={false}
+      validateOnBlur={false}
     >
       {(props) => (
         <Form>
@@ -59,6 +61,7 @@ export const LoginForm = (props: TLoginFormProps) => {
             py="15"
             borderRadius="xl"
             boxShadow="md"
+            bgColor="white"
           >
             <Heading fontSize="x-large" textAlign="center" my="5">
               Prijavi se
@@ -75,10 +78,10 @@ export const LoginForm = (props: TLoginFormProps) => {
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <Input
                       id="email"
-                      ml="1.5"
                       type="email"
                       disabled={props.isSubmitting}
                       spellCheck="false"
+                      fontSize="sm"
                       placeholder="primjer@domena.com"
                       {...field}
                     />
@@ -109,10 +112,11 @@ export const LoginForm = (props: TLoginFormProps) => {
                         pr="3"
                       />
                       <Input
-                        ml="1.5"
                         type={isShownPassword ? "text" : "password"}
                         disabled={props.isSubmitting}
                         spellCheck="false"
+                        fontSize="sm"
+                        placeholder="Mora imati najmanje 6 znakova"
                         {...field}
                       />
                     </InputGroup>

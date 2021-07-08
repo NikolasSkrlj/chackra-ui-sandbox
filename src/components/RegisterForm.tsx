@@ -69,6 +69,7 @@ export const RegisterForm = (props: TLoginFormProps) => {
             py="15"
             borderRadius="xl"
             boxShadow="md"
+            bgColor="white"
           >
             <Heading fontSize="x-large" textAlign="center" my="5">
               Registriraj se
@@ -86,7 +87,7 @@ export const RegisterForm = (props: TLoginFormProps) => {
                     <FormLabel htmlFor="firstName">Ime</FormLabel>
                     <Input
                       id="firstName"
-                      ml="1.5"
+                      fontSize="sm"
                       type="text"
                       disabled={props.isSubmitting}
                       spellCheck="false"
@@ -109,7 +110,7 @@ export const RegisterForm = (props: TLoginFormProps) => {
                     <FormLabel htmlFor="lastName"> Prezime</FormLabel>
                     <Input
                       id="lastName"
-                      ml="1.5"
+                      fontSize="sm"
                       type="text"
                       disabled={props.isSubmitting}
                       spellCheck="false"
@@ -133,8 +134,8 @@ export const RegisterForm = (props: TLoginFormProps) => {
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <Input
                       id="email"
-                      ml="1.5"
                       type="email"
+                      fontSize="sm"
                       disabled={props.isSubmitting}
                       spellCheck="false"
                       placeholder="primjer@domena.com"
@@ -168,10 +169,11 @@ export const RegisterForm = (props: TLoginFormProps) => {
                         pr="3"
                       />
                       <Input
-                        ml="1.5"
                         type={isShownPassword ? "text" : "password"}
                         disabled={props.isSubmitting}
                         spellCheck="false"
+                        fontSize="sm"
+                        placeholder="Mora imati najmanje 6 znakova"
                         {...field}
                       />
                     </InputGroup>
@@ -192,7 +194,6 @@ export const RegisterForm = (props: TLoginFormProps) => {
                       colorScheme="teal"
                       size="lg"
                       mt="2.5"
-                      ml="1.5"
                       isChecked={props.values.areTermsAgreed}
                       id="areTermsAgreed"
                       onChange={(val) =>
@@ -202,16 +203,18 @@ export const RegisterForm = (props: TLoginFormProps) => {
                         )
                       }
                     >
-                      Prihvaćam{" "}
-                      <Link
-                        color="teal.400"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          e.preventDefault();
-                        }}
-                      >
-                        uvjete korištenja
-                      </Link>
+                      <Text fontSize="sm">
+                        Prihvaćam{" "}
+                        <Link
+                          color="teal.400"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                          }}
+                        >
+                          uvjete korištenja
+                        </Link>
+                      </Text>
                     </Checkbox>
                     <FormErrorMessage mx="1.5">
                       {form.errors.areTermsAgreed}

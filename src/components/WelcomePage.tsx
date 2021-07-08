@@ -20,6 +20,7 @@ export const WelcomePage = (props: TWelcomePageProps) => {
       py="15"
       borderRadius="xl"
       boxShadow="md"
+      bgColor="white"
     >
       <Heading fontSize="x-large" textAlign="center" my="5">
         Dobrodošao, Nikolas!
