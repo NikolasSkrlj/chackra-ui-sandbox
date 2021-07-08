@@ -79,7 +79,7 @@ export const LoginForm = (props: TLoginFormProps) => {
                       type="email"
                       disabled={props.isSubmitting}
                       spellCheck="false"
-                      placeholder="example@domain.com"
+                      placeholder="primjer@domena.com"
                       {...field}
                     />
                     <FormErrorMessage mx="1.5">
