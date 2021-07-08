@@ -54,16 +54,36 @@ export const WelcomePage = (props: TWelcomePageProps) => {
           <Divider></Divider>
 
           <Flex direction="column" pt="5">
-            <Button variant="ghost" colorScheme="teal" fontSize="sm">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              fontSize="sm"
+              color="gray"
+            >
               Inicijative
             </Button>
-            <Button variant="ghost" colorScheme="teal" fontSize="sm">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              fontSize="sm"
+              color="gray"
+            >
               Gradske četvrti
             </Button>
-            <Button variant="ghost" colorScheme="teal" fontSize="sm">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              fontSize="sm"
+              color="gray"
+            >
               Mjesni odbori
             </Button>
-            <Button variant="ghost" colorScheme="teal" fontSize="sm">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              fontSize="sm"
+              color="gray"
+            >
               Moja aktivnost
             </Button>
           </Flex>
@@ -75,6 +95,7 @@ export const WelcomePage = (props: TWelcomePageProps) => {
             colorScheme="teal"
             justifySelf="flex-end"
             fontSize="sm"
+            color="gray"
           >
             Moj račun
           </Button>
@@ -90,6 +111,7 @@ export const WelcomePage = (props: TWelcomePageProps) => {
                 setActiveForm("login");
               }, 1500);
             }}
+            fontSize="sm"
             justifySelf="flex-end"
           >
             Odjavi se
