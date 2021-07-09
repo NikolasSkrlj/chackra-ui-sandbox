@@ -155,8 +155,9 @@ export const WelcomePage = (props: TWelcomePageProps) => {
         pl="10"
         boxShadow="md"
         borderRadius="md"
+        overflowY="scroll"
       >
-        <SimpleGrid columns={3} spacing={isMobile ? 1 : 3} h="100%">
+        <SimpleGrid spacing={isMobile ? 1 : 2} h="100%" columns={[1, 2, 3]}>
           <Box height="80px">
             <FormControl id="gradska-četvrt" size="sm">
               <FormLabel>Gradska četvrt</FormLabel>
@@ -209,7 +210,7 @@ export const WelcomePage = (props: TWelcomePageProps) => {
         boxShadow="md"
         borderRadius="md"
         pr="5"
-        overflow="scroll"
+        overflowX="scroll"
       >
         <Table variant="simple" fontSize="sm">
           <Thead bg="gray.100">
