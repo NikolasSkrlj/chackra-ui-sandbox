@@ -140,8 +140,16 @@ export const WelcomePage = (props: TWelcomePageProps) => {
           </Flex>
         </GridItem>
       ) : (
-        <GridItem rowSpan={1} colSpan={12} boxShadow="md">
-          <Flex justify="flex-end" placeItems="center" h="100%" pr="5">
+        <GridItem rowSpan={1} colSpan={12} boxShadow="md" overflow="hidden">
+          <Flex justify="space-between" placeItems="center" h="100%">
+            <Image
+              w="100px"
+              h="120px"
+              pl="5"
+              objectFit="cover"
+              justifySelf="flex-start"
+              src="https://i.pinimg.com/originals/58/5a/10/585a10ec06e01b60aadc4dca4c2ddbe6.png"
+            />
             <SidebarDrawer />
           </Flex>
         </GridItem>

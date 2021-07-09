@@ -30,6 +30,7 @@ export const SidebarDrawer = () => {
         variant="ghost"
         size="lg"
         onClick={onOpen}
+        mr="3"
       >
         <FaBars size={30} color="gray" />
       </Button>
